@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <title>Profil Software Task</title>
+  </head>
+  <body>
+    <section class="searchSection">
+      <label for="findInput"
+        >Please type the title of the movie and press enter</label
+      >
+      <form class="form">
+        <input
+          type="text"
+          class="form form_input"
+          placeholder="type title"
+          value=""
+          id="findInput"
+        />
+        <button type="submit" class=" from form_button" hidden></button>
+      </form>
+      <label for="sortBy">Sort results by:</label>
+      <select name="sortBy" class="select select_sort">
+        <option value="title">Title</option>
+        <option value="released">Release Date</option>
+        <option value="rating">Rating</option>
+      </select>
+      <label for="filterBy">Find results by exact rating:</label>
+      <input
+        type="number"
+        name="filterBy"
+        class="input input_filter"
+        value=""
+        min="1"
+        max="10"
+      />
+    </section>
+    <div class="container"></div>
+    <p class="end">There is no more results</p>
+    <script src="./components/append.js"></script>
+    <script src="./components/listenerFunction.js"></script>
+    <script src="./components/fetch.js"></script>
+    <script src="./components/create.js"></script>
+    <script src="./components/messages.js"></script>
+    <script src="./components/sort.js"></script>
+    <script src="./components/helpers/helpVar.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

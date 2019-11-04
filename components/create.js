@@ -1,0 +1,37 @@
+const createElementsToAppend = data => {
+  const fragment = document.createDocumentFragment();
+  data.forEach(element => {
+    const divToAppend = document.createElement("div");
+    divToAppend.classList.add("container_item");
+    const h1 = document.createElement("h1");
+    const pDescription = document.createElement("p");
+    const pRating = document.createElement("p");
+    const pRuntime = document.createElement("p");
+    const pReleased = document.createElement("p");
+    const pAwards = document.createElement("p");
+    const img = document.createElement("img");
+    h1.classList.add("container_title");
+    pDescription.classList.add("container_description");
+    pRating.classList.add("container_rating");
+    pRuntime.classList.add("container_runtime");
+    pReleased.classList.add("container_released");
+    pAwards.classList.add("container_awards");
+    img.classList.add("container_img");
+    h1.innerHTML = element.title;
+    pDescription.innerHTML = element.description;
+    pRating.innerHTML = element.rating;
+    pRuntime.innerHTML = element.runtime;
+    pReleased.innerHTML = element.released;
+    pAwards.innerHTML = element.awards;
+    img.src = element.image;
+    divToAppend.appendChild(h1);
+    divToAppend.appendChild(img);
+    divToAppend.appendChild(pDescription);
+    divToAppend.appendChild(pRating);
+    divToAppend.appendChild(pRuntime);
+    divToAppend.appendChild(pReleased);
+    divToAppend.appendChild(pAwards);
+    fragment.appendChild(divToAppend);
+  });
+  return fragment;
+};
